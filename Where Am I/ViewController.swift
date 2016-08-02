@@ -44,6 +44,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.speedLabel.text = "\(userLocation.speed)"
         
         self.altitudeLabel.text = "\(userLocation.altitude)"
+        
+        
+        CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks, error) -> Void in
+            
+            if (error != nil) {
+                
+                print(error)
+            } else {
+                
+                if let p:CLPlacemark = CLPlacemark(placemark: placemarks![0]) {
+                    
+                    print(p)
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
