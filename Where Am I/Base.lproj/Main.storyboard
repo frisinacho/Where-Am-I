@@ -99,6 +99,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="yyl-HE-a8i" id="e86-op-d6e"/>
+                        <outlet property="altitudeLabel" destination="eJh-uz-7Am" id="01a-yR-HeN"/>
+                        <outlet property="courseLabel" destination="777-Dw-lBN" id="RK7-43-5EX"/>
+                        <outlet property="latitudeLabel" destination="vkL-IS-n7s" id="dia-me-iDV"/>
+                        <outlet property="longitudeLabel" destination="5Io-4x-yTJ" id="upb-qY-mNp"/>
+                        <outlet property="speedLabel" destination="v6P-4R-ALi" id="EG0-yX-9Y7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
