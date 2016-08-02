@@ -55,7 +55,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 
                 if let p:CLPlacemark = CLPlacemark(placemark: placemarks![0]) {
                     
-                    print(p)
+                    var subThoroughfare:String = ""
+                    var subLocality = ""
+                    
+                    if (p.subThoroughfare != nil) {
+                        subThoroughfare = p.subThoroughfare!
+                    }
+                    
+                    if (p.subLocality != nil) {
+                        subLocality = "\(p.subLocality!) \n"
+                    }
+                    
+                    self.addressLabel.text = "\(subThoroughfare) \(p.thoroughfare!) \n \(subLocality) \(p.subAdministrativeArea!) \n \(p.postalCode!) \n \(p.country!)"
                 }
             }
         }
